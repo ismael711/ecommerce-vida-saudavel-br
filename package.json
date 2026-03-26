@@ -1,0 +1,24 @@
+{
+  "name": "suplementos-premium",
+  "version": "1.0.0",
+  "description": "E-commerce estático de suplementos alimentares com links de afiliados",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "build": "echo 'Static site - no build needed'",
+    "test": "echo 'No tests configured'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seu-usuario/ecommerce-vida-saudavel-br.git"
+  },
+  "keywords": [
+    "ecommerce",
+    "suplementos",
+    "afiliados",
+    "static-site",
+    "github-pages"
+  ],
+  "author": "Seu Nome",
+  "license": "MIT"
+}

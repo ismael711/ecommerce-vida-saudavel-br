@@ -1,0 +1,27 @@
+# Jekyll configuration for GitHub Pages
+
+title: Suplementos Premium
+description: E-commerce estático de suplementos alimentares com links de afiliados
+url: "https://seu-usuario.github.io"
+baseurl: "/ecommerce-vida-saudavel-br"
+
+# GitHub Pages configuration
+github: [metadata]
+markdown: kramdown
+theme: null
+
+# Build settings
+exclude:
+  - node_modules
+  - README.md
+  - DEPLOYMENT.md
+  - examples.html
+  - .gitignore
+  - package.json
+
+# Analytics
+google_analytics: 'GA_ID'
+
+# Build settings
+safe: true
+incremental: false
