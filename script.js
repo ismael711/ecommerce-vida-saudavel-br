@@ -33,6 +33,9 @@ async function initializeApp() {
         appState.products = await fetchProducts();
         appState.filteredProducts = appState.products;
         
+        // Renderiza o produto destaque (featured)
+        renderFeaturedProduct();
+        
         // Renderiza os produtos
         renderProducts(appState.filteredProducts);
         
@@ -48,8 +51,64 @@ async function initializeApp() {
 }
 
 /**
- * Renderiza a grid de produtos
+ * Renderiza a seção hero com o produto destaque
  */
+function renderFeaturedProduct() {
+    const featuredHeroEl = document.getElementById('featured-hero');
+    
+    // Busca o produto destaque pela configuração
+    const featuredProduct = appState.products.find(p => p.featured);
+    
+    if (!featuredProduct) {
+        featuredHeroEl.style.display = 'none';
+        return;
+    }
+    
+    const featuredHtml = `
+        <div class="featured-hero-content">
+            <div class="featured-hero-image">
+                <img src="${featuredProduct.image}" alt="${featuredProduct.name}" loading="lazy">
+            </div>
+            
+            <div class="featured-hero-info">
+                <h2>${escapeHtml(featuredProduct.name)}</h2>
+                <p class="featured-hero-description">${escapeHtml(featuredProduct.description)}</p>
+                
+                <div class="featured-hero-price">
+                    R$ ${featuredProduct.price.toFixed(2).replace('.', ',')}
+                </div>
+                
+                <div class="featured-hero-benefits">
+                    <h4>Principais Benefícios:</h4>
+                    <ul>
+                        ${featuredProduct.benefits.map(benefit => 
+                            `<li>${escapeHtml(benefit)}</li>`
+                        ).join('')}
+                    </ul>
+                </div>
+                
+                <div class="featured-hero-cta">
+                    <button class="btn btn-featured btn-featured-secondary" onclick="viewProduct(${featuredProduct.id})">
+                        ℹ️ Saiba Mais
+                    </button>
+                    <button class="btn btn-featured btn-featured-primary" onclick="buyFeaturedProduct('${featuredProduct.affiliate_link}')">
+                        🎁 Comprar com Desconto
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    featuredHeroEl.innerHTML = featuredHtml;
+}
+
+/**
+ * Função específica para compra do produto destaque
+ */
+function buyFeaturedProduct(affiliateLink) {
+    window.open(affiliateLink, '_blank');
+    trackAffiliateClick(affiliateLink);
+}
 function renderProducts(products) {
     // Limpa a grid
     productsGrid.innerHTML = '';

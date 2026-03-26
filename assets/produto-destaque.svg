@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+  <!-- Fundo degradado -->
+  <defs>
+    <linearGradient id="frascoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5F5F5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8E8E8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="fracsoPreenchimento" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9999;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF6B6B;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="300" height="400" fill="url(#frascoBg)"/>
+  
+  <!-- Frasco de colágeno - realista -->
+  <g transform="translate(75, 40)">
+    <!-- Corpo do frasco -->
+    <path d="M 50 30 L 40 80 Q 40 100 50 110 L 100 110 Q 110 100 110 80 L 100 30 Z" 
+          fill="url(#fracsoPreenchimento)" stroke="#E55555" stroke-width="2"/>
+    
+    <!-- Frasco interno (vidro) -->
+    <path d="M 52 35 L 43 78 Q 43 95 50 103 L 100 103 Q 107 95 107 78 L 98 35 Z" 
+          fill="#FFB3B3" opacity="0.7"/>
+    
+    <!-- Rótulo -->
+    <rect x="45" y="55" width="60" height="30" rx="3" fill="white" opacity="0.9"/>
+    <text x="75" y="68" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="#FF6B6B">Colágeno</text>
+    <text x="75" y="80" font-family="Arial" font-size="8" text-anchor="middle" fill="#666">Tipo 2</text>
+    
+    <!-- Topo do frasco -->
+    <rect x="58" y="25" width="34" height="8" rx="2" fill="#CCCCCC" stroke="#999" stroke-width="1"/>
+    <rect x="60" y="22" width="30" height="4" fill="#E8E8E8"/>
+    
+    <!-- Brilho do vidro -->
+    <ellipse cx="65" cy="50" rx="8" ry="20" fill="white" opacity="0.3"/>
+    
+    <!-- Sombra do frasco -->
+    <ellipse cx="75" cy="115" rx="45" ry="8" fill="#000" opacity="0.15"/>
+  </g>
+  
+  <!-- Selo "Mais Vendido" -->
+  <g transform="translate(210, 50)">
+    <circle cx="0" cy="0" r="28" fill="#F39C12" stroke="#E67E22" stroke-width="2"/>
+    <text x="-2" y="-5" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="white">🔥 MAIS</text>
+    <text x="-2" y="8" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="white">VENDIDO</text>
+  </g>
+  
+  <!-- Benefícios abaixo -->
+  <g transform="translate(50, 250)">
+    <text x="100" y="0" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#2C3E50">Colágeno Tipo 2 Premium</text>
+    
+    <text x="100" y="25" font-family="Arial" font-size="11" text-anchor="middle" fill="#555" font-style="italic">
+      Saúde das articulações
+    </text>
+    
+    <g transform="translate(50, 40)">
+      <text x="0" y="0" font-family="Arial" font-size="10" fill="#27AE60">✓ Mobilidade</text>
+      <text x="0" y="18" font-family="Arial" font-size="10" fill="#27AE60">✓ Conforto</text>
+      <text x="100" y="0" font-family="Arial" font-size="10" fill="#27AE60">✓ Qualidade de vida</text>
+      <text x="100" y="18" font-family="Arial" font-size="10" fill="#27AE60">✓ Hidratação</text>
+    </g>
+  </g>
+  
+  <!-- Preço -->
+  <g transform="translate(150, 350)">
+    <text x="0" y="0" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#FF6B6B">R$ 89,90</text>
+  </g>
+</svg>

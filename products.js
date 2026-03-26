@@ -2,19 +2,31 @@
  * Products Database
  * Este arquivo contém todos os produtos disponíveis na loja.
  * Estrutura preparada para futura integração com API externa (JSON/REST)
+ * 
+ * CONFIGURAÇÃO DE BRANDING:
+ * Altere os valores abaixo para customizar sua loja:
  */
 
+const STORE_CONFIG = {
+    name: 'VitaPower Suplementos',
+    logo: 'assets/logo.svg',
+    tagline: 'Saúde e bem-estar em primeiro lugar',
+    featured_product_id: 1  // ID do produto destaque na hero section
+};
+
 const PRODUCTS = [
+    // PRODUTO DESTAQUE - Colágeno Tipo 2 Premium
     {
         id: 1,
-        name: 'Colágeno Tipo 2',
-        description: 'Colágeno hidrolisado de alta pureza para saúde articular e pele radiante. Absorção rápida e máxima eficácia.',
-        fullDescription: 'Colágeno Tipo 2 hidrolisado é essencial para manter a saúde das articulações, cartilagens e pele. Esse suplemento de alta pureza contém aminoácidos de cadeia longa que promovem elasticidade, flexibilidade e resistência. Ideal para atletas, idosos e pessoas preocupadas com saúde óssea.',
-        image: 'https://via.placeholder.com/300x300?text=Colágeno+Tipo+2',
+        name: 'Colágeno Tipo 2 Premium',
+        description: 'Suplemento voltado para saúde das articulações, mobilidade e qualidade de vida. Ideal para quem busca mais conforto no dia a dia.',
+        fullDescription: 'Colágeno Tipo 2 Premium é formulado especificamente para promover a saúde das articulações e cartilagens. Com alta concentração de aminoácidos essenciais (glicina, prolina e hidroxiprolina), este suplemento melhora significativamente a mobilidade e flexibilidade. Perfeito para atletas, pessoas ativas e anyone buscando manter a qualidade de vida e conforto ao longo dos anos.',
+        image: 'assets/produto-destaque.svg',  // Usar SVG realista
         price: 89.90,
-        affiliate_link: 'https://braip.com/produto/colageno-tipo-2?afiliado=suplementos-premium',
+        affiliate_link: 'https://braip.com/produto-colageno?afiliado=teste',
         bestseller: true,
-        benefits: ['Saúde articular', 'Pele radiante', 'Cabelos e unhas', 'Anti-inflamatório'],
+        featured: true,  // Destaque na hero section
+        benefits: ['Saúde articular', 'Maior mobilidade', 'Conforto no dia a dia', 'Pele mais firme'],
         serving: '10g (1 colher)',
         servings: '300 porções'
     },
