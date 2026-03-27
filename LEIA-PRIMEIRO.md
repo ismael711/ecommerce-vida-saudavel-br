@@ -1,4 +1,4 @@
-# 🎯 LEIA PRIMEIRO - VitaPower Suplementos Atualizado
+# 🎯 LEIA PRIMEIRO - Vida Saudável BR
 
 > Seu projeto foi completamente atualizado! Veja o que mudou.
 

@@ -1,5 +1,5 @@
 /**
- * Suplementos Premium - Stylesheet
+ * Vida Saudável BR - Stylesheet
  * Design moderno e responsivo com CSS3 (Flexbox e Grid)
  */
 
@@ -7,11 +7,11 @@
    VARIABLES E RESET
    ============================================ */
 :root {
-    --primary-color: #FF6B6B;
-    --secondary-color: #4ECDC4;
-    --dark-color: #2C3E50;
-    --light-color: #ECF0F1;
-    --gray-color: #95A5A6;
+    --primary-color: #27AE60;
+    --secondary-color: #16A085;
+    --dark-color: #1B4332;
+    --light-color: #D4F1D4;
+    --gray-color: #555555;
     --white-color: #FFFFFF;
     --success-color: #27AE60;
     --warning-color: #F39C12;
@@ -737,7 +737,7 @@ body {
 }
 
 .disclaimer {
-    background-color: rgba(255, 107, 107, 0.2);
+    background-color: rgba(39, 174, 96, 0.2);
     padding: 15px;
     border-left: 4px solid var(--primary-color);
     border-radius: 4px;

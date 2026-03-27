@@ -1,4 +1,4 @@
-# 🚀 Como Começar - Suplementos Premium
+# 🚀 Como Começar - Vida Saudável BR
 
 ## Opção 1: Testar Agora (2 minutos)
 
@@ -48,7 +48,7 @@ https://seu-usuario.github.io/ecommerce-vida-saudavel-br
 
 Procure:
 ```html
-<h1>Suplementos Premium</h1>
+<h1>Vida Saudável BR</h1>
 ```
 
 Troque por:
@@ -94,7 +94,7 @@ Encontre o array `PRODUCTS` e adicione:
 
 ```css
 :root {
-    --primary-color: #FF6B6B;      /* Vermelho primário */
+    --primary-color: #27AE60;      /* Verde primário */
     --secondary-color: #4ECDC4;    /* Turquesa */
     --dark-color: #2C3E50;         /* Cinza escuro */
     --light-color: #ECF0F1;        /* Cinza claro */
@@ -130,7 +130,7 @@ image: 'https://cdn.seu-site.com/imagens/produto.jpg'
 
 **🔴 Vermelha (Padrão)**
 ```css
---primary-color: #FF6B6B;
+--primary-color: #27AE60;
 --secondary-color: #FF8C8C;
 --dark-color: #C92A2A;
 ```

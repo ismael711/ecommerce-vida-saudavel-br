@@ -91,7 +91,7 @@ Edite as variáveis CSS no início de `style.css`:
 
 ```css
 :root {
-    --primary-color: #FF6B6B;        /* Cor principal */
+    --primary-color: #27AE60;        /* Cor principal */
     --secondary-color: #4ECDC4;      /* Cor secundária */
     --dark-color: #2C3E50;           /* Cor escura */
     --light-color: #ECF0F1;          /* Cor clara */

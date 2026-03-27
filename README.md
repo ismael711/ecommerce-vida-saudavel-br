@@ -1,4 +1,4 @@
-# 💊 Suplementos Premium - E-commerce Estático
+# 💚 Vida Saudável BR - E-commerce Estático
 
 Um site estático de e-commerce (vitrine de afiliados) completo, moderno e responsivo, pronto para ser hospedado no GitHub Pages.
 
@@ -89,7 +89,7 @@ git push -u origin main
 ## 🎨 Design
 
 ### Paleta de Cores
-- **Primária**: #FF6B6B (Vermelho vibrante)
+- **Primária**: #27AE60 (Verde vibrante)
 - **Secundária**: #4ECDC4 (Turquesa)
 - **Escura**: #2C3E50 (Cinza escuro)
 - **Clara**: #ECF0F1 (Cinza claro)

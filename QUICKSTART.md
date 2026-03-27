@@ -1,4 +1,4 @@
-# ⚡ Guia Rápido - Suplementos Premium
+# ⚡ Guia Rápido - Vida Saudável BR
 
 ## Começar em 5 Minutos
 
@@ -65,7 +65,7 @@ style.css           → Estilos
 ```css
 /* Em style.css */
 :root {
-    --primary-color: #FF6B6B;    /* Cor principal */
+    --primary-color: #27AE60;    /* Cor principal */
     --secondary-color: #4ECDC4;  /* Cor secundária */
 }
 ```

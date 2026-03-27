@@ -1,4 +1,4 @@
-# ✨ ATUALIZAÇÕES REALIZADAS - VitaPower Suplementos
+# ✨ ATUALIZAÇÕES REALIZADAS - Vida Saudável BR
 
 > Seu e-commerce foi totalmente atualizado com as melhorias solicitadas!
 

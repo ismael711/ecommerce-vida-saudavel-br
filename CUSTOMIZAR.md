@@ -1,4 +1,4 @@
-# 🎨 Guia de Customização - VitaPower Suplementos
+# 🎨 Guia de Customização - Vida Saudável BR
 
 > Todas as customizações em um só lugar!
 
@@ -39,7 +39,7 @@ logoPath: 'assets/seu-logo.svg'  // ou .png
 
 ```css
 :root {
-    --primary-color: #FF6B6B;      /* Vermelho - mude aqui */
+    --primary-color: #27AE60;      /* Verde - mude aqui */
     --secondary-color: #4ECDC4;    /* Turquesa - mude aqui */
     --dark-color: #2C3E50;         /* Cinza escuro */
     --light-color: #ECF0F1;        /* Cinza claro */
@@ -121,7 +121,7 @@ assets/
 ## 📁 Estrutura de Arquivos
 
 ```
-VitaPower/
+Vida Saudável BR/
 ├─ index.html              ← Página inicial
 ├─ product.html            ← Detalhes do produto
 ├─ config.js               ← Configurações (EDITE AQUI!)

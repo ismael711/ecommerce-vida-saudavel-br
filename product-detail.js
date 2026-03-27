@@ -1,5 +1,5 @@
 /**
- * Suplementos Premium - Página de Detalhes do Produto
+ * Vida Saudável BR - Página de Detalhes do Produto
  * Gerencia a exibição de detalhes individuais dos produtos
  */
 
@@ -76,7 +76,7 @@ function updatePageMeta() {
     const product = pageState.product;
     
     // Atualiza título
-    document.title = `${product.name} - Suplementos Premium`;
+    document.title = `${product.name} - Vida Saudável BR`;
     
     // Atualiza breadcrumb
     document.getElementById('breadcrumb-product').textContent = product.name;

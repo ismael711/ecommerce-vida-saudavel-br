@@ -1,5 +1,5 @@
 /**
- * CONFIGURAÇÃO RÁPIDA - VitaPower Suplementos
+ * CONFIGURAÇÃO RÁPIDA - Vida Saudável BR
  * 
  * Edite este arquivo para customizar sua loja facilmente
  * sem precisar modificar outros arquivos do projeto
@@ -11,27 +11,27 @@
 
 const BRANDING = {
     // Nome da loja - Aparece em todos os lugares
-    storeName: 'VitaPower Suplementos',
+    storeName: 'Vida Saudável BR',
     
     // Logo - Caminho da imagem SVG ou PNG
     // Coloque seu logo em: assets/logo.svg
     logoPath: 'assets/logo.svg',
-    logoAlt: 'VitaPower Suplementos',
+    logoAlt: 'Vida Saudável BR',
     
     // Tagline - Frase abaixo do nome
     tagline: 'Saúde e bem-estar em primeiro lugar',
     
     // Cores principais (copie os valores do style.css)
     colors: {
-        primary: '#FF6B6B',      // Vermelho
-        secondary: '#4ECDC4',    // Turquesa
-        dark: '#2C3E50',         // Cinza escuro
-        light: '#ECF0F1',        // Cinza claro
+        primary: '#27AE60',      // Verde
+        secondary: '#16A085',    // Verde escuro
+        dark: '#1B4332',         // Verde muito escuro
+        light: '#D4F1D4',        // Verde claro
         success: '#27AE60'       // Verde
     },
     
     // Meta tags
-    metaDescription: 'VitaPower Suplementos - Saúde e bem-estar em primeiro lugar',
+    metaDescription: 'Vida Saudável BR - Saúde e bem-estar em primeiro lugar',
     metaKeywords: 'suplementos, vitaminas, saúde, bem-estar, afiliados'
 };
 
@@ -75,16 +75,16 @@ const AFFILIATE_CONFIG = {
 
 const SEO_CONFIG = {
     // Título da página
-    pageTitle: 'VitaPower Suplementos - Saúde e Bem-estar',
+    pageTitle: 'Vida Saudável BR - Saúde e Bem-estar',
     
     // Descrição padrão
-    description: 'Descubra os melhores suplementos para sua saúde e bem-estar em VitaPower',
+    description: 'Descubra os melhores suplementos para sua saúde e bem-estar em Vida Saudável BR',
     
     // Palavras-chave
     keywords: 'suplementos, vitaminas, colágeno, whey protein, creatina, saúde',
     
     // Site name para Open Graph
-    siteName: 'VitaPower Suplementos'
+    siteName: 'Vida Saudável BR'
 };
 
 // ================================================

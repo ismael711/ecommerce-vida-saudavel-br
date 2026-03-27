@@ -1,4 +1,4 @@
-# 🎯 COMECE AQUI - Suplementos Premium
+# 🎯 COMECE AQUI - Vida Saudável BR
 
 > **Seu e-commerce estático está 100% pronto!**
 
@@ -67,7 +67,7 @@ https://seu-usuario.github.io/ecommerce-vida-saudavel-br
 
 Procure:
 ```html
-<h1>Suplementos Premium</h1>
+<h1>Vida Saudável BR</h1>
 ```
 
 Mude para seu nome:
@@ -106,7 +106,7 @@ Procure o array `PRODUCTS` e adicione novos produtos:
 Encontre:
 ```css
 :root {
-    --primary-color: #FF6B6B;      /* Vermelho */
+    --primary-color: #27AE60;      /* Verde */
     --secondary-color: #4ECDC4;    /* Turquesa */
     --dark-color: #2C3E50;         /* Cinza escuro */
     --light-color: #ECF0F1;        /* Cinza claro */

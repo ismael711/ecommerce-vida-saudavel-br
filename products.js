@@ -8,7 +8,7 @@
  */
 
 const STORE_CONFIG = {
-    name: 'VitaPower Suplementos',
+    name: 'Vida Saudável BR',
     logo: 'assets/logo.svg',
     tagline: 'Saúde e bem-estar em primeiro lugar',
     featured_product_id: 1  // ID do produto destaque na hero section

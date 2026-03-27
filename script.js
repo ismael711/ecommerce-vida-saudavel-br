@@ -1,5 +1,5 @@
 /**
- * Suplementos Premium - Main JavaScript
+ * Vida Saudável BR - Main JavaScript
  * Gerencia a página inicial com listagem de produtos
  */
 
