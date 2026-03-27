@@ -238,7 +238,7 @@ body {
 }
 
 .btn-featured-primary {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #E55555 100%);
+    background: linear-gradient(135deg, #FF6B6B 0%, #E55555 100%);
     color: white;
 }
 
@@ -250,8 +250,8 @@ body {
 
 .btn-featured-secondary {
     background: white;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    color: #FF6B6B;
+    border: 2px solid #FF6B6B;
 }
 
 .btn-featured-secondary:hover {

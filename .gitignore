@@ -22,3 +22,7 @@ build/
 .env
 .env.local
 .cache/
+
+# Original image files (use SVG versions instead)
+assets/*.png
+
