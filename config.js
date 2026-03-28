@@ -15,7 +15,7 @@ const BRANDING = {
     
     // Logo - Caminho da imagem SVG ou PNG
     // Coloque seu logo em: assets/logo.svg
-    logoPath: 'assets/logo.svg',
+    logoPath: './assets/logo.svg',
     logoAlt: 'Vida Saudável BR',
     
     // Tagline - Frase abaixo do nome
@@ -48,7 +48,7 @@ const FEATURED_CONFIG = {
     
     // Imagem do produto - Use caminho em assets/
     // Exemplo: 'assets/produto-destaque.svg'
-    imagePath: 'assets/produto-destaque.svg'
+    imagePath: './assets/produto-destaque.svg'
 };
 
 // ================================================
