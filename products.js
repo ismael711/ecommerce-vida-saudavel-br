@@ -23,7 +23,7 @@ const PRODUCTS = [
         fullDescription: 'Colágeno Tipo II Pro é formulado especificamente para promover a saúde das articulações e cartilagens. Com alta concentração de aminoácidos essenciais (glicina, prolina e hidroxiprolina), este suplemento melhora significativamente a mobilidade e flexibilidade. Perfeito para atletas, pessoas ativas e anyone buscando manter a qualidade de vida e conforto ao longo dos anos.',
         image: 'assets/produto-colageno-1pote.png',
         price: 119.90,
-        affiliate_link: 'https://braip.com/produto1?afiliado=teste',
+        affiliate_link: 'https://ev.braip.com/ref?pl=plaxpreq&ck=chevljvg&af=afiyd3x07l',
         bestseller: true,
         featured: true,  // Destaque na hero section
         benefits: ['Saúde articular', 'Maior mobilidade', 'Conforto no dia a dia', 'Pele mais firme'],
@@ -37,7 +37,7 @@ const PRODUCTS = [
                 quantity: 1,
                 price: 119.90,
                 image: 'assets/produto-colageno-1pote.png',
-                affiliate_link: 'https://braip.com/produto1?afiliado=teste',
+                affiliate_link: 'https://ev.braip.com/ref?pl=plaxpreq&ck=chevljvg&af=afiyd3x07l',
                 badge: null
             },
             {
@@ -46,7 +46,7 @@ const PRODUCTS = [
                 quantity: 3,
                 price: 297.90,
                 image: 'assets/produto-colageno-3potes.png',
-                affiliate_link: 'https://braip.com/produto3?afiliado=teste',
+                affiliate_link: 'https://ev.braip.com/ref?pl=plagjg2x&ck=chevljvg&af=afiyd3x07l',
                 badge: '🔥 MAIS VENDIDO'
             },
             {
@@ -55,7 +55,7 @@ const PRODUCTS = [
                 quantity: 5,
                 price: 387.90,
                 image: 'assets/produto-colageno-5potes.png',
-                affiliate_link: 'https://braip.com/produto5?afiliado=teste',
+                affiliate_link: 'https://ev.braip.com/ref?pl=plal91dv&ck=chevljvg&af=afiyd3x07l',
                 badge: '💎 MELHOR CUSTO'
             }
         ]
