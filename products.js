@@ -15,20 +15,50 @@ const STORE_CONFIG = {
 };
 
 const PRODUCTS = [
-    // PRODUTO DESTAQUE - Colágeno Tipo 2 Premium
+    // PRODUTO DESTAQUE - Colágeno Tipo II Pro
     {
         id: 1,
-        name: 'Colágeno Tipo 2 Premium',
+        name: 'Colágeno Tipo II Pro',
         description: 'Suplemento voltado para saúde das articulações, mobilidade e qualidade de vida. Ideal para quem busca mais conforto no dia a dia.',
-        fullDescription: 'Colágeno Tipo 2 Premium é formulado especificamente para promover a saúde das articulações e cartilagens. Com alta concentração de aminoácidos essenciais (glicina, prolina e hidroxiprolina), este suplemento melhora significativamente a mobilidade e flexibilidade. Perfeito para atletas, pessoas ativas e anyone buscando manter a qualidade de vida e conforto ao longo dos anos.',
-        image: 'assets/produto-destaque.svg',  // Usar SVG realista
-        price: 89.90,
-        affiliate_link: 'https://braip.com/produto-colageno?afiliado=teste',
+        fullDescription: 'Colágeno Tipo II Pro é formulado especificamente para promover a saúde das articulações e cartilagens. Com alta concentração de aminoácidos essenciais (glicina, prolina e hidroxiprolina), este suplemento melhora significativamente a mobilidade e flexibilidade. Perfeito para atletas, pessoas ativas e anyone buscando manter a qualidade de vida e conforto ao longo dos anos.',
+        image: 'assets/produto-colageno-1pote.png',
+        price: 119.90,
+        affiliate_link: 'https://braip.com/produto1?afiliado=teste',
         bestseller: true,
         featured: true,  // Destaque na hero section
         benefits: ['Saúde articular', 'Maior mobilidade', 'Conforto no dia a dia', 'Pele mais firme'],
         serving: '10g (1 colher)',
-        servings: '300 porções'
+        servings: '300 porções',
+        // Variações de produto
+        variations: [
+            {
+                id: 'variation-1pote',
+                label: '1 pote',
+                quantity: 1,
+                price: 119.90,
+                image: 'assets/produto-colageno-1pote.png',
+                affiliate_link: 'https://braip.com/produto1?afiliado=teste',
+                badge: null
+            },
+            {
+                id: 'variation-3potes',
+                label: '3 potes',
+                quantity: 3,
+                price: 297.90,
+                image: 'assets/produto-colageno-3potes.png',
+                affiliate_link: 'https://braip.com/produto3?afiliado=teste',
+                badge: '🔥 MAIS VENDIDO'
+            },
+            {
+                id: 'variation-5potes',
+                label: '5 potes',
+                quantity: 5,
+                price: 387.90,
+                image: 'assets/produto-colageno-5potes.png',
+                affiliate_link: 'https://braip.com/produto5?afiliado=teste',
+                badge: '💎 MELHOR CUSTO'
+            }
+        ]
     },
     {
         id: 2,

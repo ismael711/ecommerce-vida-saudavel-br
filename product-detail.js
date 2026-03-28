@@ -7,7 +7,8 @@
 const pageState = {
     product: null,
     relatedProducts: [],
-    loading: true
+    loading: true,
+    selectedVariation: null  // Rastreia variação selecionada
 };
 
 // Referências ao DOM
@@ -94,23 +95,50 @@ function updatePageMeta() {
 function renderProductDetail() {
     const product = pageState.product;
     
+    // Inicializa com a primeira variação se disponível
+    if (product.variations && product.variations.length > 0) {
+        pageState.selectedVariation = product.variations[0];
+    }
+    
     const badgeHtml = product.bestseller 
         ? '<span class="badge-bestseller">🔥 Mais Vendido</span>' 
         : '';
+    
+    // HTML das variações se existirem
+    const variationsHtml = product.variations ? `
+        <div class="product-variations">
+            <h3>Escolha sua Quantidade:</h3>
+            <div class="variations-options">
+                ${product.variations.map((variation, index) => `
+                    <label class="variation-option ${index === 0 ? 'selected' : ''}">
+                        <input type="radio" name="variation" value="${variation.id}" 
+                               ${index === 0 ? 'checked' : ''} 
+                               onchange="selectVariation('${variation.id}')">
+                        <span class="variation-button">
+                            <span class="variation-label">${escapeHtml(variation.label)}</span>
+                            ${variation.badge ? `<span class="variation-badge">${variation.badge}</span>` : ''}
+                        </span>
+                    </label>
+                `).join('')}
+            </div>
+        </div>
+    ` : '';
     
     const detailHtml = `
         <div class="product-detail-content">
             <div class="product-detail-image">
                 ${badgeHtml}
-                <img src="${product.image}" alt="${product.name}">
+                <img id="product-image" src="${pageState.selectedVariation ? pageState.selectedVariation.image : product.image}" alt="${product.name}">
             </div>
             
             <div class="product-detail-info">
                 <h1>${escapeHtml(product.name)}</h1>
                 
                 <div class="product-price">
-                    R$ ${product.price.toFixed(2).replace('.', ',')}
+                    R$ <span id="product-price">${(pageState.selectedVariation ? pageState.selectedVariation.price : product.price).toFixed(2).replace('.', ',')}</span>
                 </div>
+                
+                ${variationsHtml}
                 
                 <p class="product-detail-description">
                     ${escapeHtml(product.fullDescription)}
@@ -143,8 +171,8 @@ function renderProductDetail() {
                 
                 <div class="product-actions-detail">
                     <button class="btn btn-secondary" onclick="goBack()">← Voltar</button>
-                    <button class="btn btn-success" onclick="buyProduct('${product.affiliate_link}')">
-                        🛒 Comprar Agora - R$ ${product.price.toFixed(2).replace('.', ',')}
+                    <button class="btn btn-success" onclick="buyProductVariation()">
+                        🛒 Comprar Agora - R$ <span id="button-price">${(pageState.selectedVariation ? pageState.selectedVariation.price : product.price).toFixed(2).replace('.', ',')}</span>
                     </button>
                 </div>
                 
@@ -219,6 +247,64 @@ function viewProduct(productId) {
 }
 
 /**
+ * Seleciona uma variação de produto
+ */
+function selectVariation(variationId) {
+    const product = pageState.product;
+    const variation = product.variations.find(v => v.id === variationId);
+    
+    if (!variation) return;
+    
+    pageState.selectedVariation = variation;
+    
+    // Atualiza imagem
+    const imageEl = document.getElementById('product-image');
+    if (imageEl) {
+        imageEl.src = variation.image;
+    }
+    
+    // Atualiza preço no display
+    const priceEl = document.getElementById('product-price');
+    if (priceEl) {
+        priceEl.textContent = variation.price.toFixed(2).replace('.', ',');
+    }
+    
+    // Atualiza preço no botão
+    const buttonPriceEl = document.getElementById('button-price');
+    if (buttonPriceEl) {
+        buttonPriceEl.textContent = variation.price.toFixed(2).replace('.', ',');
+    }
+    
+    // Atualiza visual dos botões
+    const options = document.querySelectorAll('.variation-option');
+    options.forEach(option => {
+        option.classList.remove('selected');
+        const input = option.querySelector('input');
+        if (input && input.value === variationId) {
+            option.classList.add('selected');
+        }
+    });
+}
+
+/**
+ * Redireciona para o link de afiliado com variação selecionada
+ */
+function buyProductVariation() {
+    const variation = pageState.selectedVariation;
+    
+    if (!variation) {
+        buyProduct(pageState.product.affiliate_link);
+        return;
+    }
+    
+    // Abre em nova aba
+    window.open(variation.affiliate_link, '_blank');
+    
+    // Rastreia o clique
+    trackAffiliateClick(variation.affiliate_link, variation);
+}
+
+/**
  * Redireciona para o link de afiliado
  */
 function buyProduct(affiliateLink) {
@@ -268,13 +354,14 @@ function showErrorAndRedirect(message) {
 /**
  * Rastreia cliques em links de afiliados
  */
-function trackAffiliateClick(link) {
+function trackAffiliateClick(link, variation = null) {
     console.log('Clique em afiliado:', link);
     
     const clicks = JSON.parse(localStorage.getItem('affiliate_clicks') || '[]');
     clicks.push({
         productId: pageState.product.id,
         productName: pageState.product.name,
+        variation: variation ? variation.label : null,
         link: link,
         timestamp: new Date().toISOString()
     });

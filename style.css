@@ -674,6 +674,83 @@ body {
 }
 
 /* ============================================
+   PRODUCT VARIATIONS
+   ============================================ */
+.product-variations {
+    background-color: var(--light-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+.product-variations h3 {
+    color: var(--dark-color);
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.variations-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+}
+
+.variation-option {
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.variation-option input[type="radio"] {
+    display: none;
+}
+
+.variation-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 12px;
+    border: 2px solid #CCC;
+    border-radius: 8px;
+    background-color: var(--white-color);
+    text-align: center;
+    transition: var(--transition);
+    min-height: 80px;
+    gap: 5px;
+}
+
+.variation-label {
+    font-weight: 600;
+    color: var(--dark-color);
+    font-size: 0.95rem;
+}
+
+.variation-badge {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.variation-option.selected .variation-button {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.variation-option.selected .variation-label {
+    color: var(--white-color);
+}
+
+.variation-option.selected .variation-badge {
+    color: var(--white-color);
+}
+
+.variation-option:hover .variation-button {
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(39, 174, 96, 0.2);
+}
+
+/* ============================================
    RELATED PRODUCTS
    ============================================ */
 .related-products {
