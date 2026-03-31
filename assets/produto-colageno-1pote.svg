@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <defs>
+    <linearGradient id="gradColageno" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8B4B8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D68A92;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect width="300" height="300" fill="#f8f4f0"/>
+  
+  <!-- Pote -->
+  <g filter="url(#shadow)">
+    <!-- Tampa -->
+    <rect x="85" y="60" width="130" height="15" rx="3" fill="#C4A080"/>
+    <rect x="80" y="72" width="140" height="8" fill="#A0826D"/>
+    
+    <!-- Corpo do pote -->
+    <path d="M 90 80 L 85 180 Q 85 200 100 205 L 200 205 Q 215 200 215 180 L 210 80 Z" fill="url(#gradColageno)" stroke="#C68A92" stroke-width="1"/>
+    
+    <!-- Pó dentro do pote -->
+    <path d="M 95 100 L 92 180 Q 92 195 100 200 L 200 200 Q 208 195 208 180 L 205 100 Z" fill="#E8C4C4" opacity="0.6"/>
+    
+    <!-- Brilho no pote -->
+    <ellipse cx="120" cy="130" rx="15" ry="40" fill="#fff" opacity="0.2"/>
+    
+    <!-- Etiqueta -->
+    <rect x="95" y="130" width="110" height="50" rx="3" fill="#fff" opacity="0.9"/>
+    <text x="150" y="145" font-size="12" font-weight="bold" text-anchor="middle" fill="#C68A92">Colágeno</text>
+    <text x="150" y="165" font-size="10" text-anchor="middle" fill="#666">Tipo II Pro</text>
+    <text x="150" y="175" font-size="9" text-anchor="middle" fill="#999">1 Pote</text>
+  </g>
+</svg>

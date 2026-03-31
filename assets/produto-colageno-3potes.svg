@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <defs>
+    <linearGradient id="gradColageno2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8B4B8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D68A92;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow2" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect width="300" height="300" fill="#f8f4f0"/>
+  
+  <!-- Pote 1 (esquerda) -->
+  <g filter="url(#shadow2)" transform="translate(20, 40)">
+    <rect x="10" y="5" width="45" height="6" rx="2" fill="#C4A080"/>
+    <rect x="7" y="12" width="51" height="3" fill="#A0826D"/>
+    <path d="M 12 15 L 10 65 Q 10 75 15 77 L 54 77 Q 59 75 59 65 L 57 15 Z" fill="url(#gradColageno2)" stroke="#C68A92" stroke-width="0.5"/>
+    <path d="M 14 25 L 12 65 Q 12 72 16 74 L 53 74 Q 57 72 57 65 L 55 25 Z" fill="#E8C4C4" opacity="0.6"/>
+    <ellipse cx="24" cy="45" rx="6" ry="15" fill="#fff" opacity="0.2"/>
+    <text x="32" y="58" font-size="6" font-weight="bold" text-anchor="middle" fill="#999">1</text>
+  </g>
+  
+  <!-- Pote 2 (centro) -->
+  <g filter="url(#shadow2)" transform="translate(110, 30)">
+    <rect x="10" y="5" width="45" height="6" rx="2" fill="#C4A080"/>
+    <rect x="7" y="12" width="51" height="3" fill="#A0826D"/>
+    <path d="M 12 15 L 10 70 Q 10 80 15 82 L 54 82 Q 59 80 59 70 L 57 15 Z" fill="url(#gradColageno2)" stroke="#C68A92" stroke-width="0.5"/>
+    <path d="M 14 25 L 12 70 Q 12 77 16 79 L 53 79 Q 57 77 57 70 L 55 25 Z" fill="#E8C4C4" opacity="0.6"/>
+    <ellipse cx="24" cy="50" rx="6" ry="18" fill="#fff" opacity="0.2"/>
+    <text x="32" y="63" font-size="6" font-weight="bold" text-anchor="middle" fill="#999">2</text>
+  </g>
+  
+  <!-- Pote 3 (direita) -->
+  <g filter="url(#shadow2)" transform="translate(200, 40)">
+    <rect x="10" y="5" width="45" height="6" rx="2" fill="#C4A080"/>
+    <rect x="7" y="12" width="51" height="3" fill="#A0826D"/>
+    <path d="M 12 15 L 10 65 Q 10 75 15 77 L 54 77 Q 59 75 59 65 L 57 15 Z" fill="url(#gradColageno2)" stroke="#C68A92" stroke-width="0.5"/>
+    <path d="M 14 25 L 12 65 Q 12 72 16 74 L 53 74 Q 57 72 57 65 L 55 25 Z" fill="#E8C4C4" opacity="0.6"/>
+    <ellipse cx="24" cy="45" rx="6" ry="15" fill="#fff" opacity="0.2"/>
+    <text x="32" y="58" font-size="6" font-weight="bold" text-anchor="middle" fill="#999">3</text>
+  </g>
+  
+  <!-- Texto -->
+  <text x="150" y="240" font-size="16" font-weight="bold" text-anchor="middle" fill="#C68A92">Colágeno Tipo II Pro</text>
+  <text x="150" y="260" font-size="14" text-anchor="middle" fill="#D68A92">KIT 3 Potes</text>
+</svg>

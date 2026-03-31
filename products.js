@@ -21,7 +21,7 @@ const PRODUCTS = [
         name: 'Colágeno Tipo II Pro',
         description: 'Suplemento voltado para saúde das articulações, mobilidade e qualidade de vida. Ideal para quem busca mais conforto no dia a dia.',
         fullDescription: 'Colágeno Tipo II Pro é formulado especificamente para promover a saúde das articulações e cartilagens. Com alta concentração de aminoácidos essenciais (glicina, prolina e hidroxiprolina), este suplemento melhora significativamente a mobilidade e flexibilidade. Perfeito para atletas, pessoas ativas e anyone buscando manter a qualidade de vida e conforto ao longo dos anos.',
-        image: './assets/produto-colageno-1pote.png',
+        image: './assets/produto-colageno-1pote.svg',
         price: 119.90,
         affiliate_link: 'https://ev.braip.com/ref?pl=plaxpreq&ck=chevljvg&af=afiyd3x07l',
         bestseller: true,
@@ -36,7 +36,7 @@ const PRODUCTS = [
                 label: '1 pote',
                 quantity: 1,
                 price: 119.90,
-                image: './assets/produto-colageno-1pote.png',
+                image: './assets/produto-colageno-1pote.svg',
                 affiliate_link: 'https://ev.braip.com/ref?pl=plaxpreq&ck=chevljvg&af=afiyd3x07l',
                 badge: null
             },
@@ -45,7 +45,7 @@ const PRODUCTS = [
                 label: '3 potes',
                 quantity: 3,
                 price: 297.90,
-                image: './assets/produto-colageno-3potes.png',
+                image: './assets/produto-colageno-3potes.svg',
                 affiliate_link: 'https://ev.braip.com/ref?pl=plagjg2x&ck=chevljvg&af=afiyd3x07l',
                 badge: '🔥 MAIS VENDIDO'
             },
@@ -54,7 +54,7 @@ const PRODUCTS = [
                 label: '5 potes',
                 quantity: 5,
                 price: 387.90,
-                image: './assets/produto-colageno-5potes.png',
+                image: './assets/produto-colageno-5potes.svg',
                 affiliate_link: 'https://ev.braip.com/ref?pl=plal91dv&ck=chevljvg&af=afiyd3x07l',
                 badge: '💎 MELHOR CUSTO'
             }

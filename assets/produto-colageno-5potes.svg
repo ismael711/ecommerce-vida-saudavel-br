@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 320">
+  <defs>
+    <linearGradient id="gradColageno3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8B4B8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D68A92;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow3" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect width="300" height="320" fill="#f8f4f0"/>
+  
+  <!-- Pote 1 (esquerda-topo) -->
+  <g filter="url(#shadow3)" transform="translate(10, 30)">
+    <rect x="8" y="3" width="35" height="5" rx="2" fill="#C4A080"/>
+    <rect x="5" y="9" width="41" height="2" fill="#A0826D"/>
+    <path d="M 9 12 L 7 55 Q 7 62 11 64 L 42 64 Q 46 62 46 55 L 44 12 Z" fill="url(#gradColageno3)" stroke="#C68A92" stroke-width="0.5"/>
+    <path d="M 11 20 L 9 55 Q 9 60 12 62 L 41 62 Q 44 60 44 55 L 42 20 Z" fill="#E8C4C4" opacity="0.5"/>
+    <text x="24" y="50" font-size="5" font-weight="bold" text-anchor="middle" fill="#999">1</text>
+  </g>
+  
+  <!-- Pote 2 (centro-topo) -->
+  <g filter="url(#shadow3)" transform="translate(90, 20)">
+    <rect x="8" y="3" width="35" height="5" rx="2" fill="#C4A080"/>
+    <rect x="5" y="9" width="41" height="2" fill="#A0826D"/>
+    <path d="M 9 12 L 7 62 Q 7 70 11 72 L 42 72 Q 46 70 46 62 L 44 12 Z" fill="url(#gradColageno3)" stroke="#C68A92" stroke-width="0.5"/>
+    <path d="M 11 20 L 9 62 Q 9 68 12 70 L 41 70 Q 44 68 44 62 L 42 20 Z" fill="#E8C4C4" opacity="0.5"/>
+    <text x="24" y="57" font-size="5" font-weight="bold" text-anchor="middle" fill="#999">2</text>
+  </g>
+  
+  <!-- Pote 3 (direita-topo) -->
+  <g filter="url(#shadow3)" transform="translate(170, 30)">
+    <rect x="8" y="3" width="35" height="5" rx="2" fill="#C4A080"/>
+    <rect x="5" y="9" width="41" height="2" fill="#A0826D"/>
+    <path d="M 9 12 L 7 55 Q 7 62 11 64 L 42 64 Q 46 62 46 55 L 44 12 Z" fill="url(#gradColageno3)" stroke="#C68A92" stroke-width="0.5"/>
+    <path d="M 11 20 L 9 55 Q 9 60 12 62 L 41 62 Q 44 60 44 55 L 42 20 Z" fill="#E8C4C4" opacity="0.5"/>
+    <text x="24" y="50" font-size="5" font-weight="bold" text-anchor="middle" fill="#999">3</text>
+  </g>
+  
+  <!-- Pote 4 (esquerda-baixo) -->
+  <g filter="url(#shadow3)" transform="translate(50, 85)">
+    <rect x="8" y="3" width="35" height="5" rx="2" fill="#C4A080"/>
+    <rect x="5" y="9" width="41" height="2" fill="#A0826D"/>
+    <path d="M 9 12 L 7 55 Q 7 62 11 64 L 42 64 Q 46 62 46 55 L 44 12 Z" fill="url(#gradColageno3)" stroke="#C68A92" stroke-width="0.5"/>
+    <path d="M 11 20 L 9 55 Q 9 60 12 62 L 41 62 Q 44 60 44 55 L 42 20 Z" fill="#E8C4C4" opacity="0.5"/>
+    <text x="24" y="50" font-size="5" font-weight="bold" text-anchor="middle" fill="#999">4</text>
+  </g>
+  
+  <!-- Pote 5 (direita-baixo) -->
+  <g filter="url(#shadow3)" transform="translate(130, 85)">
+    <rect x="8" y="3" width="35" height="5" rx="2" fill="#C4A080"/>
+    <rect x="5" y="9" width="41" height="2" fill="#A0826D"/>
+    <path d="M 9 12 L 7 55 Q 7 62 11 64 L 42 64 Q 46 62 46 55 L 44 12 Z" fill="url(#gradColageno3)" stroke="#C68A92" stroke-width="0.5"/>
+    <path d="M 11 20 L 9 55 Q 9 60 12 62 L 41 62 Q 44 60 44 55 L 42 20 Z" fill="#E8C4C4" opacity="0.5"/>
+    <text x="24" y="50" font-size="5" font-weight="bold" text-anchor="middle" fill="#999">5</text>
+  </g>
+  
+  <!-- Texto -->
+  <text x="150" y="245" font-size="16" font-weight="bold" text-anchor="middle" fill="#C68A92">Colágeno Tipo II Pro</text>
+  <text x="150" y="270" font-size="14" text-anchor="middle" fill="#D68A92">KIT 5 Potes</text>
+  <text x="150" y="295" font-size="11" text-anchor="middle" fill="#999">MELHOR CUSTO</text>
+</svg>
