@@ -3,6 +3,24 @@
  * Gerencia a página inicial com listagem de produtos
  */
 
+// Helper function para resolver URLs de imagem
+function getImageUrl(imagePath) {
+    if (!imagePath) return '';
+    // Se já é URL externa (http/https), retorna como está
+    if (imagePath.startsWith('http')) return imagePath;
+    // Normaliza caminho relativo
+    imagePath = imagePath.replace(/^\.\//, '');
+    return window.CONFIG.baseUrl + '/' + imagePath;
+}
+
+// Carregar logo ao iniciar
+document.addEventListener('DOMContentLoaded', () => {
+    const logoImg = document.getElementById('site-logo');
+    if (logoImg) {
+        logoImg.src = getImageUrl(window.CONFIG.BRANDING.logoPath);
+    }
+});
+
 // Estado da aplicação
 const appState = {
     products: [],
@@ -67,7 +85,7 @@ function renderFeaturedProduct() {
     const featuredHtml = `
         <div class="featured-hero-content">
             <div class="featured-hero-image">
-                <img src="${featuredProduct.image}" alt="${featuredProduct.name}" loading="lazy">
+                <img src="${getImageUrl(featuredProduct.image)}" alt="${featuredProduct.name}" loading="lazy">
             </div>
             
             <div class="featured-hero-info">
@@ -142,7 +160,7 @@ function createProductCard(product) {
     
     card.innerHTML = `
         <div class="product-image">
-            <img src="${product.image}" alt="${product.name}" loading="lazy">
+            <img src="${getImageUrl(product.image)}" alt="${product.name}" loading="lazy">
             ${badgeHtml}
         </div>
         <div class="product-info">

@@ -123,6 +123,20 @@ const IMAGE_CONFIG = {
 };
 
 // ================================================
+// BASE URL PARA GITHUB PAGES
+// ================================================
+
+const getBaseUrl = () => {
+    // Se usando domínio customizado (CNAME), baseUrl é vazio
+    // Se usando GitHub Pages padrão, detectar automaticamente
+    const pathname = window.location.pathname;
+    if (pathname.includes('/ecommerce-vida-saudavel-br/')) {
+        return '/ecommerce-vida-saudavel-br';
+    }
+    return '';
+};
+
+// ================================================
 // EXPORTAR CONFIGURAÇÕES
 // ================================================
 
@@ -132,5 +146,6 @@ window.CONFIG = {
     AFFILIATE_CONFIG,
     SEO_CONFIG,
     FILTER_CONFIG,
-    IMAGE_CONFIG
+    IMAGE_CONFIG,
+    baseUrl: getBaseUrl()
 };

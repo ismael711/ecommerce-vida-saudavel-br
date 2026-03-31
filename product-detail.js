@@ -3,6 +3,16 @@
  * Gerencia a exibição de detalhes individuais dos produtos
  */
 
+// Helper function para resolver URLs de imagem
+function getImageUrl(imagePath) {
+    if (!imagePath) return '';
+    // Se já é URL externa (http/https), retorna como está
+    if (imagePath.startsWith('http')) return imagePath;
+    // Normaliza caminho relativo
+    imagePath = imagePath.replace(/^\.\//, '');
+    return window.CONFIG.baseUrl + '/' + imagePath;
+}
+
 // Estado da página
 const pageState = {
     product: null,
@@ -128,7 +138,7 @@ function renderProductDetail() {
         <div class="product-detail-content">
             <div class="product-detail-image">
                 ${badgeHtml}
-                <img id="product-image" src="${pageState.selectedVariation ? pageState.selectedVariation.image : product.image}" alt="${product.name}">
+                <img id="product-image" src="${getImageUrl(pageState.selectedVariation ? pageState.selectedVariation.image : product.image)}" alt="${product.name}">
             </div>
             
             <div class="product-detail-info">
@@ -216,7 +226,7 @@ function createRelatedProductCard(product) {
     
     card.innerHTML = `
         <div class="product-image">
-            <img src="${product.image}" alt="${product.name}" loading="lazy">
+            <img src="${getImageUrl(product.image)}" alt="${product.name}" loading="lazy">
             ${badgeHtml}
         </div>
         <div class="product-info">
@@ -260,7 +270,7 @@ function selectVariation(variationId) {
     // Atualiza imagem
     const imageEl = document.getElementById('product-image');
     if (imageEl) {
-        imageEl.src = variation.image;
+        imageEl.src = getImageUrl(variation.image);
     }
     
     // Atualiza preço no display
