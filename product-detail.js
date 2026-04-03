@@ -81,6 +81,18 @@ function getProductIdFromUrl() {
 }
 
 /**
+ * Gera slug para URL baseado no nome do produto
+ */
+function generateProductSlug(productName) {
+    return productName
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/[^\w-]/g, '');
+}
+
+/**
  * Atualiza meta tags da página com informações do produto
  */
 function updatePageMeta() {
@@ -134,6 +146,10 @@ function renderProductDetail() {
         </div>
     ` : '';
     
+    // Obter servings e weightTotal da variação ou produto
+    const servings = pageState.selectedVariation?.servings || product.servings;
+    const weightTotal = pageState.selectedVariation?.weightTotal || product.weightTotal || 'N/A';
+    
     const detailHtml = `
         <div class="product-detail-content">
             <div class="product-detail-image">
@@ -171,18 +187,18 @@ function renderProductDetail() {
                     </div>
                     <div class="spec-item">
                         <span class="spec-label">Quantidade de Porções:</span>
-                        <span class="spec-value">${escapeHtml(product.servings)}</span>
+                        <span class="spec-value" id="spec-servings">${escapeHtml(servings)}</span>
                     </div>
                     <div class="spec-item">
-                        <span class="spec-label">Compatível com:</span>
-                        <span class="spec-value">GitHub Pages</span>
+                        <span class="spec-label">Peso Total:</span>
+                        <span class="spec-value" id="spec-weight">${escapeHtml(weightTotal)}</span>
                     </div>
                 </div>
                 
                 <div class="product-actions-detail">
                     <button class="btn btn-secondary" onclick="goBack()">← Voltar</button>
                     <button class="btn btn-success" onclick="buyProductVariation()">
-                        🛒 Comprar Agora - R$ <span id="button-price">${(pageState.selectedVariation ? pageState.selectedVariation.price : product.price).toFixed(2).replace('.', ',')}</span>
+                        🛒 Comprar Agora
                     </button>
                 </div>
                 
@@ -253,7 +269,9 @@ function createRelatedProductCard(product) {
  * Redireciona para a página de detalhes de outro produto
  */
 function viewProduct(productId) {
-    window.location.href = `product.html?id=${productId}`;
+    const product = PRODUCTS.find(p => p.id === productId);
+    const slug = product?.slug || generateProductSlug(product?.name || '');
+    window.location.href = `product.html?id=${productId}&slug=${slug}`;
 }
 
 /**
@@ -279,10 +297,15 @@ function selectVariation(variationId) {
         priceEl.textContent = variation.price.toFixed(2).replace('.', ',');
     }
     
-    // Atualiza preço no botão
-    const buttonPriceEl = document.getElementById('button-price');
-    if (buttonPriceEl) {
-        buttonPriceEl.textContent = variation.price.toFixed(2).replace('.', ',');
+    // Atualiza especificações (servings e weight)
+    const servingsEl = document.getElementById('spec-servings');
+    if (servingsEl && variation.servings) {
+        servingsEl.textContent = variation.servings;
+    }
+    
+    const weightEl = document.getElementById('spec-weight');
+    if (weightEl && variation.weightTotal) {
+        weightEl.textContent = variation.weightTotal;
     }
     
     // Atualiza visual dos botões

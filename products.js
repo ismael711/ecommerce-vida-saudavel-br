@@ -18,6 +18,7 @@ const PRODUCTS = [
     // PRODUTO DESTAQUE - Colágeno Tipo II Pro
     {
         id: 1,
+        slug: 'colageno-tipo2',
         name: 'Colágeno Tipo II',
         description: 'Suplemento voltado para saúde das articulações, mobilidade e qualidade de vida. Ideal para quem busca mais conforto no dia a dia.',
         fullDescription: 'Colágeno Tipo II Pro é formulado especificamente para promover a saúde das articulações e cartilagens. Com alta concentração de aminoácidos essenciais (glicina, prolina e hidroxiprolina), este suplemento melhora significativamente a mobilidade e flexibilidade. Perfeito para atletas, pessoas ativas e anyone buscando manter a qualidade de vida e conforto ao longo dos anos.',
@@ -27,8 +28,9 @@ const PRODUCTS = [
         bestseller: true,
         featured: true,
         benefits: ['Saúde articular', 'Maior mobilidade', 'Conforto no dia a dia', 'Pele mais firme'],
-        serving: '10g (1 colher)',
-        servings: '300 porções',
+        serving: '20g (1 cápsula)',
+        servings: '30 cápsulas',
+        weightTotal: '600mg',
         variations: [
             {
                 id: 'variation-1pote',
@@ -37,7 +39,9 @@ const PRODUCTS = [
                 price: 119.90,
                 image: './assets/produto-colageno-1pote.svg',
                 affiliate_link: 'https://ev.braip.com/ref?pl=plaxpreq&ck=chevljvg&af=afiyd3x07l',
-                badge: null
+                badge: null,
+                servings: '30 cápsulas',
+                weightTotal: '600mg'
             },
             {
                 id: 'variation-3potes',
@@ -46,7 +50,9 @@ const PRODUCTS = [
                 price: 297.90,
                 image: './assets/produto-colageno-3potes.svg',
                 affiliate_link: 'https://ev.braip.com/ref?pl=plagjg2x&ck=chevljvg&af=afiyd3x07l',
-                badge: '🔥 MAIS VENDIDO'
+                badge: '🔥 MAIS VENDIDO',
+                servings: '90 cápsulas',
+                weightTotal: '1800mg'
             },
             {
                 id: 'variation-5potes',
@@ -55,12 +61,15 @@ const PRODUCTS = [
                 price: 387.90,
                 image: './assets/produto-colageno-5potes.svg',
                 affiliate_link: 'https://ev.braip.com/ref?pl=plal91dv&ck=chevljvg&af=afiyd3x07l',
-                badge: '💎 MELHOR CUSTO'
+                badge: '💎 MELHOR CUSTO',
+                servings: '150 cápsulas',
+                weightTotal: '3000mg'
             }
         ]
     },
     {
         id: 2,
+        slug: 'action-coffee',
         name: 'Action Coffee',
         description: 'Uma excelente opção para se obter energia ao longo do dia com ingredientes exclusivamente combinados.',
         fullDescription: 'Uma excelente opção para se obter energia ao longo do dia! Ele conta com ingredientes exclusivamente combinados para te entregar mais energia e disposição, ajudando também a promover melhores funções cerebrais como atenção, memória e foco. Possui ingredientes capazes de promover saciedade e diminuir a compulsão por doces, além de aumentar a queima de gordura. A fórmula do ACTION COFFEE é produzida com leite de coco, sendo recomendado para pessoas que seguem uma dieta com baixo carboidrato (low carb) e sem lactose.',
@@ -104,6 +113,7 @@ const PRODUCTS = [
     },
     {
         id: 3,
+        slug: 'nervocure',
         name: 'Nervocure',
         description: 'Cura pela raiz a lombalgia (dor nas costas), diminui inchaço e inflamação, protege cartilagens.',
         fullDescription: 'Cura Pela Raiz a LOMBALGIA (DOR NAS COSTAS) ATÉ MESMO CRÕNICA; Diminui inchaço, inflamação e compressão dos nervos; Protege e regenera as Cartilagens e ossos, podendo Reverter até mesmo casos mais extremos de Atrose e Osteoporose; Ajuda a se libertar dos analgésicos; Melhore suas noites de sono',

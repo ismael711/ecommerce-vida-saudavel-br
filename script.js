@@ -220,7 +220,21 @@ function applyFilter(filter) {
  * Redireciona para a página de detalhes do produto
  */
 function viewProduct(productId) {
-    window.location.href = `product.html?id=${productId}`;
+    const product = PRODUCTS.find(p => p.id === productId);
+    const slug = product?.slug || generateProductSlug(product?.name || '');
+    window.location.href = `product.html?id=${productId}&slug=${slug}`;
+}
+
+/**
+ * Gera slug para URL baseado no nome do produto
+ */
+function generateProductSlug(productName) {
+    return productName
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/[^\w-]/g, '');
 }
 
 /**
