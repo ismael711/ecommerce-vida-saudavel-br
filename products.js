@@ -28,9 +28,8 @@ const PRODUCTS = [
         bestseller: true,
         featured: true,
         benefits: ['Saúde articular', 'Maior mobilidade', 'Conforto no dia a dia', 'Pele mais firme'],
-        serving: '20g (1 cápsula)',
+        serving: '600mg (1 cápsula)',
         servings: '30 cápsulas',
-        weightTotal: '600mg',
         variations: [
             {
                 id: 'variation-1pote',
@@ -40,8 +39,7 @@ const PRODUCTS = [
                 image: './assets/produto-colageno-1pote.svg',
                 affiliate_link: 'https://ev.braip.com/ref?pl=plaxpreq&ck=chevljvg&af=afiyd3x07l',
                 badge: null,
-                servings: '30 cápsulas',
-                weightTotal: '600mg'
+                servings: '30 cápsulas'
             },
             {
                 id: 'variation-3potes',
@@ -51,8 +49,7 @@ const PRODUCTS = [
                 image: './assets/produto-colageno-3potes.svg',
                 affiliate_link: 'https://ev.braip.com/ref?pl=plagjg2x&ck=chevljvg&af=afiyd3x07l',
                 badge: '🔥 MAIS VENDIDO',
-                servings: '90 cápsulas',
-                weightTotal: '1800mg'
+                servings: '90 cápsulas'
             },
             {
                 id: 'variation-5potes',
@@ -62,8 +59,7 @@ const PRODUCTS = [
                 image: './assets/produto-colageno-5potes.svg',
                 affiliate_link: 'https://ev.braip.com/ref?pl=plal91dv&ck=chevljvg&af=afiyd3x07l',
                 badge: '💎 MELHOR CUSTO',
-                servings: '150 cápsulas',
-                weightTotal: '3000mg'
+                servings: '150 cápsulas'
             }
         ]
     },

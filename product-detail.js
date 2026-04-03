@@ -3,6 +3,14 @@
  * Gerencia a exibição de detalhes individuais dos produtos
  */
 
+// Carregar logo ao iniciar
+document.addEventListener('DOMContentLoaded', () => {
+    const logoImg = document.getElementById('site-logo');
+    if (logoImg) {
+        logoImg.src = getImageUrl(window.CONFIG.BRANDING.logoPath);
+    }
+});
+
 // Helper function para resolver URLs de imagem
 function getImageUrl(imagePath) {
     if (!imagePath) return '';
@@ -146,9 +154,8 @@ function renderProductDetail() {
         </div>
     ` : '';
     
-    // Obter servings e weightTotal da variação ou produto
+    // Obter servings da variação ou produto
     const servings = pageState.selectedVariation?.servings || product.servings;
-    const weightTotal = pageState.selectedVariation?.weightTotal || product.weightTotal || 'N/A';
     
     const detailHtml = `
         <div class="product-detail-content">
@@ -188,10 +195,6 @@ function renderProductDetail() {
                     <div class="spec-item">
                         <span class="spec-label">Quantidade de Porções:</span>
                         <span class="spec-value" id="spec-servings">${escapeHtml(servings)}</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Peso Total:</span>
-                        <span class="spec-value" id="spec-weight">${escapeHtml(weightTotal)}</span>
                     </div>
                 </div>
                 
@@ -297,15 +300,10 @@ function selectVariation(variationId) {
         priceEl.textContent = variation.price.toFixed(2).replace('.', ',');
     }
     
-    // Atualiza especificações (servings e weight)
+    // Atualiza especificações (servings)
     const servingsEl = document.getElementById('spec-servings');
     if (servingsEl && variation.servings) {
         servingsEl.textContent = variation.servings;
-    }
-    
-    const weightEl = document.getElementById('spec-weight');
-    if (weightEl && variation.weightTotal) {
-        weightEl.textContent = variation.weightTotal;
     }
     
     // Atualiza visual dos botões
