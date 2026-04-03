@@ -18,18 +18,17 @@ const PRODUCTS = [
     // PRODUTO DESTAQUE - Colágeno Tipo II Pro
     {
         id: 1,
-        name: 'Colágeno Tipo II Pro',
+        name: 'Colágeno Tipo II',
         description: 'Suplemento voltado para saúde das articulações, mobilidade e qualidade de vida. Ideal para quem busca mais conforto no dia a dia.',
         fullDescription: 'Colágeno Tipo II Pro é formulado especificamente para promover a saúde das articulações e cartilagens. Com alta concentração de aminoácidos essenciais (glicina, prolina e hidroxiprolina), este suplemento melhora significativamente a mobilidade e flexibilidade. Perfeito para atletas, pessoas ativas e anyone buscando manter a qualidade de vida e conforto ao longo dos anos.',
         image: './assets/produto-colageno-1pote.svg',
         price: 119.90,
         affiliate_link: 'https://ev.braip.com/ref?pl=plaxpreq&ck=chevljvg&af=afiyd3x07l',
         bestseller: true,
-        featured: true,  // Destaque na hero section
+        featured: true,
         benefits: ['Saúde articular', 'Maior mobilidade', 'Conforto no dia a dia', 'Pele mais firme'],
         serving: '10g (1 colher)',
         servings: '300 porções',
-        // Variações de produto
         variations: [
             {
                 id: 'variation-1pote',
@@ -62,68 +61,71 @@ const PRODUCTS = [
     },
     {
         id: 2,
-        name: 'Silício Orgânico',
-        description: 'Mineral essencial para fortalecer pele, cabelos e unhas. Restaura colágeno e elastina naturalmente.',
-        fullDescription: 'O Silício Orgânico é um mineral vital para a estrutura e elasticidade da pele, fortalecimento de cabelos e unhas. Promove a síntese natural de colágeno e elastina, resultando em pele mais firme e jovem. Indicado também para saúde óssea e articular.',
-        image: './assets/produto-silicio.svg',
-        price: 79.90,
-        affiliate_link: 'https://braip.com/produto/silicio-organico?afiliado=suplementos-premium',
-        bestseller: false,
-        benefits: ['Pele firme', 'Cabelos fortes', 'Unhas saudáveis', 'Colágeno natural'],
-        serving: '8ml (1 dose)',
-        servings: '30 doses'
+        name: 'Action Coffee',
+        description: 'Uma excelente opção para se obter energia ao longo do dia com ingredientes exclusivamente combinados.',
+        fullDescription: 'Uma excelente opção para se obter energia ao longo do dia! Ele conta com ingredientes exclusivamente combinados para te entregar mais energia e disposição, ajudando também a promover melhores funções cerebrais como atenção, memória e foco. Possui ingredientes capazes de promover saciedade e diminuir a compulsão por doces, além de aumentar a queima de gordura. A fórmula do ACTION COFFEE é produzida com leite de coco, sendo recomendado para pessoas que seguem uma dieta com baixo carboidrato (low carb) e sem lactose.',
+        image: './assets/produto-actioncoffee1.svg',
+        price: 144.90,
+        affiliate_link: 'https://ev.braip.com/checkout/pla8lxz1/chepjd8j?pl=pla8lxz1&ck=chepjd8j&af=afilx320l6&currency=BRL',
+        bestseller: true,
+        featured: false,
+        benefits: ['Mais energia', 'Melhor foco e memória', 'Sem lactose', 'Low carb'],
+        serving: '1 pote',
+        servings: 'Conforme uso',
+        variations: [
+            {
+                id: 'variation-1pote-ac',
+                label: '1 Pote',
+                quantity: 1,
+                price: 144.90,
+                image: './assets/produto-actioncoffee1.svg',
+                affiliate_link: 'https://ev.braip.com/checkout/pla8lxz1/chepjd8j?pl=pla8lxz1&ck=chepjd8j&af=afilx320l6&currency=BRL',
+                badge: null
+            },
+            {
+                id: 'variation-3potes-ac',
+                label: '3 Potes',
+                quantity: 3,
+                price: 419.00,
+                image: './assets/produto-actioncoffee3.svg',
+                affiliate_link: 'https://ev.braip.com/checkout/plaelwe6/chepjd8j?pl=plaelwe6&ck=chepjd8j&af=afilx320l6&currency=BRL',
+                badge: '🔥 MAIS VENDIDO'
+            },
+            {
+                id: 'variation-6potes-ac',
+                label: '6 Potes',
+                quantity: 6,
+                price: 798.00,
+                image: './assets/produto-actioncoffee5.svg',
+                affiliate_link: 'https://ev.braip.com/checkout/plaqjwel/chepjd8j?af=afilx320l6&ck=chepjd8j&currency=BRL&pl=plaqjwel',
+                badge: '💎 MELHOR CUSTO'
+            }
+        ]
     },
     {
         id: 3,
-        name: 'Maca Peruana Premium',
-        description: 'Raiz adaptógena que aumenta energia, disposição e vitalidade. 100% puro, sem aditivos.',
-        fullDescription: 'Maca Peruana é uma raiz adaptógena poderosa originária dos Andes que aumenta significativamente os níveis de energia e disposição. Rico em nutrientes essenciais, equilibra hormônios e melhora o bem-estar geral. Perfeito para quem busca vitalidade e resistência.',
-        image: './assets/produto-maca.svg',
-        price: 69.90,
-        affiliate_link: 'https://braip.com/produto/maca-peruana?afiliado=suplementos-premium',
+        name: 'Nervocure',
+        description: 'Cura pela raiz a lombalgia (dor nas costas), diminui inchaço e inflamação, protege cartilagens.',
+        fullDescription: 'Cura Pela Raiz a LOMBALGIA (DOR NAS COSTAS) ATÉ MESMO CRÕNICA; Diminui inchaço, inflamação e compressão dos nervos; Protege e regenera as Cartilagens e ossos, podendo Reverter até mesmo casos mais extremos de Atrose e Osteoporose; Ajuda a se libertar dos analgésicos; Melhore suas noites de sono',
+        image: './assets/produto-nervocure-1caixa.svg',
+        price: 177.00,
+        affiliate_link: 'https://ev.braip.com/checkout/plaxw84g/cherq188?pl=plaxw84g&ck=cherq188&af=afig5g2l9o&currency=BRL',
         bestseller: true,
-        benefits: ['Energia', 'Disposição', 'Vitalidade', 'Equilíbrio hormonal'],
-        serving: '500mg',
-        servings: '60 cápsulas'
-    },
-    {
-        id: 4,
-        name: 'Whey Protein Concentrado',
-        description: 'Proteína concentrada para ganho muscular rápido. Sabor delicioso e fácil mistura. Ideal pós-treino.',
-        fullDescription: 'Whey Protein Concentrado é a proteína mais completa para ganho muscular. Contém todos os aminoácidos essenciais, especialmente BCAA e leucina, que estimulam síntese proteica muscular. Absorção rápida, ótima para pós-treino e recuperação.',
-        image: './assets/produto-whey.svg',
-        price: 129.90,
-        affiliate_link: 'https://braip.com/produto/whey-protein?afiliado=suplementos-premium',
-        bestseller: true,
-        benefits: ['Ganho muscular', 'Recuperação', 'Proteína completa', 'BCAA'],
-        serving: '30g (1 scoop)',
-        servings: '33 doses'
-    },
-    {
-        id: 5,
-        name: 'Creatina Monohidratada',
-        description: 'Creatina pura para força e hipertrofia. Aumenta produção de ATP e performance em treinos.',
-        fullDescription: 'Creatina Monohidratada é o suplemento mais estudado e eficaz para aumentar força e ganho muscular. Melhora a produção de ATP, energia celular, permitindo treinos mais intensos e recuperação acelerada. Indicada para musculação e esportes de força.',
-        image: './assets/produto-creatina.svg',
-        price: 59.90,
-        affiliate_link: 'https://braip.com/produto/creatina-monohidratada?afiliado=suplementos-premium',
-        bestseller: true,
-        benefits: ['Força muscular', 'Hipertrofia', 'Energia celular', 'Performance'],
-        serving: '5g',
-        servings: '200 doses'
-    },
-    {
-        id: 6,
-        name: 'Multivitamínico Completo',
-        description: 'Fórmula completa com 25 nutrientes essenciais para saúde integral e imunidade forte.',
-        fullDescription: 'Multivitamínico Completo é uma fórmula abrangente contendo vitaminas A, B complex, C, D3, E, K2 e minerais essenciais como zinco, selênio e magnésio. Fortalece o sistema imunológico, melhora energia e bem-estar geral. Recomendado para toda a família.',
-        image: './assets/produto-multivitamina.svg',
-        price: 99.90,
-        affiliate_link: 'https://braip.com/produto/multivitaminico?afiliado=suplementos-premium',
-        bestseller: false,
-        benefits: ['Imunidade', 'Energia', 'Saúde geral', '25 nutrientes'],
-        serving: '1 cápsula',
-        servings: '60 cápsulas'
+        featured: false,
+        benefits: ['Alívio de dor nas costas', 'Reduz inchaço e inflamação', 'Protege cartilagens', 'Melhora o sono'],
+        serving: '1 caixa',
+        servings: 'Conforme recomendado',
+        variations: [
+            {
+                id: 'variation-1caixa',
+                label: '1 CAIXA NERVOCUREMAX',
+                quantity: 1,
+                price: 177.00,
+                image: './assets/produto-nervocure-1caixa.svg',
+                affiliate_link: 'https://ev.braip.com/checkout/plaxw84g/cherq188?pl=plaxw84g&ck=cherq188&af=afig5g2l9o&currency=BRL',
+                badge: null
+            }
+        ]
     }
 ];
 
