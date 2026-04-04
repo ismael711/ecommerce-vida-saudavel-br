@@ -74,6 +74,17 @@ async function initializeProductPage() {
         pageState.relatedProducts = getRelatedProducts(productId, 3);
         renderRelatedProducts();
         
+        // Rastreia visualização de produto no GTM
+        if (typeof trackCustomEvent === 'function') {
+            trackCustomEvent('product_viewed', {
+                'productId': pageState.product.id,
+                'productName': pageState.product.name,
+                'productPrice': pageState.product.price,
+                'eventCategory': 'product',
+                'eventAction': 'view_details'
+            });
+        }
+        
     } catch (error) {
         console.error('Erro ao carregar página:', error);
         showErrorAndRedirect('Erro ao carregar produto');
@@ -288,6 +299,19 @@ function selectVariation(variationId) {
     
     pageState.selectedVariation = variation;
     
+    // Rastreia seleção de variação no GTM
+    if (typeof trackCustomEvent === 'function') {
+        trackCustomEvent('variation_selected', {
+            'productId': product.id,
+            'productName': product.name,
+            'variationId': variationId,
+            'variationLabel': variation.label,
+            'variationPrice': variation.price,
+            'eventCategory': 'product',
+            'eventAction': 'select_variation'
+        });
+    }
+    
     // Atualiza imagem
     const imageEl = document.getElementById('product-image');
     if (imageEl) {
@@ -386,12 +410,30 @@ function showErrorAndRedirect(message) {
  * Rastreia cliques em links de afiliados
  */
 function trackAffiliateClick(link, variation = null) {
+    const product = pageState.product;
+    
     console.log('Clique em afiliado:', link);
     
+    // Rastreia no GTM
+    if (typeof trackCustomEvent === 'function') {
+        trackCustomEvent('affiliate_purchase', {
+            'productId': product.id,
+            'productName': product.name,
+            'variationId': variation ? variation.id : null,
+            'variationLabel': variation ? variation.label : null,
+            'variationPrice': variation ? variation.price : product.price,
+            'affiliateLink': link,
+            'eventCategory': 'affiliate',
+            'eventAction': 'purchase_click',
+            'eventLabel': product.name
+        });
+    }
+    
+    // Armazena em localStorage para futuras análises
     const clicks = JSON.parse(localStorage.getItem('affiliate_clicks') || '[]');
     clicks.push({
-        productId: pageState.product.id,
-        productName: pageState.product.name,
+        productId: product.id,
+        productName: product.name,
         variation: variation ? variation.label : null,
         link: link,
         timestamp: new Date().toISOString()
