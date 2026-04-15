@@ -1269,3 +1269,242 @@ body {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* ============================================
+   HEADER MODERNO REDESENHADO COM BUSCA - 2026
+   ============================================ */
+
+/* Container do Header */
+.header .container {
+    max-width: 1400px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 10px 0;
+}
+
+/* Logo e Branding */
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-image {
+    height: 120px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+    transition: var(--transition-bounce);
+}
+
+.logo-image:hover {
+    filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.4));
+    transform: scale(1.05) rotate(2deg);
+}
+
+.brand-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    font-weight: 600;
+    opacity: 0.95;
+    margin: 0;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.brand-subtitle {
+    font-size: 0.9rem;
+    font-weight: 300;
+    opacity: 0.85;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Barra de Busca */
+.header-search {
+    flex: 1;
+    max-width: 600px;
+    min-width: 300px;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 50px;
+    padding: 4px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: var(--transition);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.search-container:focus-within {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2), 0 0 0 4px rgba(255, 255, 255, 0.1);
+}
+
+.search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    color: white;
+    font-weight: 500;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+}
+
+.search-input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.search-btn {
+    background: rgba(255, 255, 255, 0.25);
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-bounce);
+    color: white;
+    flex-shrink: 0;
+}
+
+.search-btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: scale(1.1);
+}
+
+.search-btn:active {
+    transform: scale(0.95);
+}
+
+.search-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Responsividade do Header */
+@media (max-width: 1024px) {
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px 0;
+    }
+    
+    .header-brand {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .header-search {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .logo-image {
+        height: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-image {
+        height: 70px;
+    }
+    
+    .tagline {
+        font-size: 1rem;
+    }
+    
+    .brand-subtitle {
+        font-size: 0.85rem;
+    }
+    
+    .brand-info {
+        text-align: left;
+    }
+    
+    .search-input {
+        font-size: 0.9rem;
+        padding: 10px 16px;
+    }
+    
+    .search-input::placeholder {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-brand {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+    
+    .brand-info {
+        text-align: center;
+    }
+    
+    .logo-image {
+        height: 60px;
+    }
+    
+    .tagline {
+        font-size: 0.9rem;
+    }
+    
+    .brand-subtitle {
+        display: none;
+    }
+    
+    .search-input {
+        padding: 10px 14px;
+    }
+}
+
+/* Animação de Pulsação para a Busca */
+@keyframes searchPulse {
+    0%, 100% {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    50% {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 4px rgba(255, 255, 255, 0.1);
+    }
+}
+
