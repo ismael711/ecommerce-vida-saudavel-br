@@ -103,9 +103,6 @@ async function initializeApp() {
         appState.products = await fetchProducts();
         appState.filteredProducts = appState.products;
         
-        // Render featured product
-        renderFeaturedProduct();
-        
         // Render products
         renderProducts(appState.filteredProducts);
         
@@ -147,73 +144,6 @@ function setupIntersectionObserver() {
             }
         });
     }, options);
-}
-
-// ============================================
-// FEATURED PRODUCT RENDERING
-// ============================================
-
-function renderFeaturedProduct() {
-    const featuredProduct = appState.products.find(p => p.featured);
-    
-    if (!featuredProduct) {
-        DOM.featuredHero.style.display = 'none';
-        return;
-    }
-    
-    const benefitsList = featuredProduct.benefits
-        .map(benefit => `<li>${escapeHtml(benefit)}</li>`)
-        .join('');
-    
-    const featuredHtml = `
-        <div class="featured-hero-content">
-            <div class="featured-hero-image">
-                <img src="${getImageUrl(featuredProduct.image)}" 
-                     alt="${escapeHtml(featuredProduct.name)}" 
-                     loading="eager">
-            </div>
-            
-            <div class="featured-hero-info">
-                <h2 id="featured-title">${escapeHtml(featuredProduct.name)}</h2>
-                <p class="featured-hero-description">${escapeHtml(featuredProduct.description)}</p>
-                
-                <div class="featured-hero-price" aria-label="Preço: R$ ${formatPrice(featuredProduct.price)}">
-                    R$ ${formatPrice(featuredProduct.price)}
-                </div>
-                
-                <div class="featured-hero-benefits">
-                    <h4>✨ Principais Benefícios:</h4>
-                    <ul>${benefitsList}</ul>
-                </div>
-                
-                <div class="featured-hero-cta">
-                    <button class="btn btn-featured btn-featured-secondary" 
-                            onclick="viewProduct(${featuredProduct.id})"
-                            aria-label="Ver mais detalhes sobre ${escapeHtml(featuredProduct.name)}">
-                        ℹ️ Saiba Mais
-                    </button>
-                    <button class="btn btn-featured btn-featured-primary" 
-                            onclick="buyFeaturedProduct('${featuredProduct.affiliate_link}', '${escapeHtml(featuredProduct.name)}')"
-                            aria-label="Comprar ${escapeHtml(featuredProduct.name)} com desconto">
-                        🎁 Comprar com Desconto
-                    </button>
-                </div>
-            </div>
-        </div>
-    `;
-    
-    DOM.featuredHero.innerHTML = featuredHtml;
-    
-    // Add fade-in animation
-    DOM.featuredHero.classList.add('fade-in');
-}
-
-/**
- * Handle featured product purchase
- */
-function buyFeaturedProduct(affiliateLink, productName) {
-    trackAffiliateClick(affiliateLink, productName, 'featured');
-    window.open(affiliateLink, '_blank', 'noopener,noreferrer');
 }
 
 // ============================================
@@ -537,6 +467,5 @@ window.addEventListener('load', () => {
 
 window.viewProduct = viewProduct;
 window.buyProduct = buyProduct;
-window.buyFeaturedProduct = buyFeaturedProduct;
 
 // Made with Bob
