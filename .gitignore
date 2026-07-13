@@ -26,3 +26,9 @@ build/
 # Original image files (use SVG versions instead)
 assets/*.png
 
+
+# Exceptions — logo and media used in production
+!assets/logo.png
+!assets/logo-semfundo.png
+!assets/*.mp4
+!assets/*.webp
