@@ -376,28 +376,14 @@
     <!-- Video 9:16 -->
     <div class="video-wrapper">
         <div class="video-container">
-            <!--
-                INSTRUÇÃO: Substitua o atributo src pelo caminho do seu vídeo.
-                Para vídeo local:  <video src="assets/grupo-telegram-preview.mp4" ...>
-                Para YouTube Shorts / embed: use um <iframe> com src do embed do YouTube.
-            -->
             <video
-                src=""
+                src="assets/grupo-telegram-preview.mp4"
                 autoplay
                 muted
                 loop
                 playsinline
                 poster="assets/produto-destaque.png">
             </video>
-
-            <!-- Placeholder exibido enquanto não há vídeo -->
-            <div class="video-placeholder" id="video-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <circle cx="12" cy="12" r="10"/>
-                    <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/>
-                </svg>
-                <p>Vídeo de demonstração<br>do grupo em breve</p>
-            </div>
         </div>
     </div>
 
@@ -471,15 +457,5 @@
         <p>© 2025 <a href="index.html">Vida Saudável BR</a> · Vitrine de afiliados. Os links podem gerar comissão.</p>
     </footer>
 
-    <script>
-        // Oculta o placeholder se o vídeo tiver src definido
-        (function () {
-            var video = document.querySelector('.video-container video');
-            var placeholder = document.getElementById('video-placeholder');
-            if (video && video.src && video.src !== window.location.href) {
-                if (placeholder) placeholder.style.display = 'none';
-            }
-        })();
-    </script>
 </body>
 </html>
