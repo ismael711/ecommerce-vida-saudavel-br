@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Entre agora no Grupo VIP de Ofertas de Suplementos no Telegram e receba as melhores promoções de Whey, Creatina, Colágeno e muito mais todos os dias.">
-    <meta name="keywords" content="grupo telegram suplementos, ofertas suplementos, promoções whey protein, creatina barato, grupo vip saúde">
+    <meta name="description" content="Entre agora no Grupo VIP de Ofertas de Suplementos no WhatsApp e receba as melhores promoções de Whey, Creatina, Colágeno e muito mais todos os dias.">
+    <meta name="keywords" content="grupo whatsapp suplementos, ofertas suplementos, promoções whey protein, creatina barato, grupo vip saúde">
     <meta name="author" content="Vida Saudável BR">
     <meta name="robots" content="index, follow">
 
@@ -14,7 +14,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vidasaudavelbr.com.br/grupo-ofertas-suplementos">
     <meta property="og:title" content="Grupo VIP de Ofertas de Suplementos — Vida Saudável BR">
-    <meta property="og:description" content="Promoções exclusivas de suplementos direto no seu Telegram. Whey, Creatina, Colágeno e muito mais com os melhores preços do Brasil.">
+    <meta property="og:description" content="Promoções exclusivas de suplementos direto no seu WhatsApp. Whey, Creatina, Colágeno e muito mais com os melhores preços do Brasil.">
     <meta property="og:image" content="https://vidasaudavelbr.com.br/assets/logo.svg">
 
     <title>Grupo VIP de Ofertas de Suplementos | Vida Saudável BR</title>
@@ -280,7 +280,7 @@
         }
 
         /* ============================================
-           CTA BUTTON
+           CTA BUTTONS
         ============================================ */
         .cta-section {
             text-align: center;
@@ -289,46 +289,94 @@
             margin: 0 auto;
         }
 
-        .cta-btn {
+        /* --- WhatsApp primary button --- */
+        .cta-btn-whatsapp {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
             width: 100%;
             max-width: 420px;
-            padding: 18px 28px;
-            background: linear-gradient(135deg, #229ED9 0%, #1a7fc1 100%);
+            padding: 20px 28px;
+            background: #25D366;
             color: #ffffff;
             font-family: 'Inter', sans-serif;
-            font-size: 1.0625rem;
+            font-size: 1.125rem;
             font-weight: 800;
             letter-spacing: 0.01em;
             text-decoration: none;
             border-radius: 14px;
             border: none;
             cursor: pointer;
-            box-shadow: 0 8px 32px rgba(34, 158, 217, 0.45);
-            transition: transform 0.15s ease, box-shadow 0.15s ease;
-            animation: pulse-cta 2.4s ease-in-out infinite;
+            box-shadow: 0 8px 32px rgba(37, 211, 102, 0.45);
+            transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+            animation: pulse-whatsapp 2.4s ease-in-out infinite;
         }
 
-        .cta-btn:hover {
+        .cta-btn-whatsapp:hover {
+            background: #128C7E;
             transform: translateY(-2px);
-            box-shadow: 0 12px 40px rgba(34, 158, 217, 0.55);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.55);
+            animation: none;
         }
 
-        .cta-btn:active {
+        .cta-btn-whatsapp:active {
             transform: translateY(0);
         }
 
-        @keyframes pulse-cta {
-            0%, 100% { box-shadow: 0 8px 32px rgba(34, 158, 217, 0.45); }
-            50%       { box-shadow: 0 8px 48px rgba(34, 158, 217, 0.7); }
+        @keyframes pulse-whatsapp {
+            0%, 100% { box-shadow: 0 8px 32px rgba(37, 211, 102, 0.45); }
+            50%       { box-shadow: 0 8px 48px rgba(37, 211, 102, 0.72); }
         }
 
-        .cta-btn svg {
-            width: 24px;
-            height: 24px;
+        .cta-btn-whatsapp svg {
+            width: 26px;
+            height: 26px;
+            flex-shrink: 0;
+        }
+
+        /* --- Telegram secondary label --- */
+        .cta-secondary-label {
+            margin-top: 24px;
+            font-size: 0.8125rem;
+            color: #6e7681;
+        }
+
+        /* --- Telegram secondary button (outline style) --- */
+        .cta-btn-telegram {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            max-width: 420px;
+            padding: 13px 24px;
+            background: transparent;
+            color: #229ED9;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9375rem;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            text-decoration: none;
+            border-radius: 12px;
+            border: 1.5px solid #229ED9;
+            cursor: pointer;
+            transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+            margin-top: 10px;
+        }
+
+        .cta-btn-telegram:hover {
+            background: rgba(34, 158, 217, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .cta-btn-telegram:active {
+            transform: translateY(0);
+        }
+
+        .cta-btn-telegram svg {
+            width: 20px;
+            height: 20px;
             flex-shrink: 0;
         }
 
@@ -368,9 +416,9 @@
 
     <!-- Hero -->
     <section class="hero">
-        <div class="badge">Grupo Exclusivo no Telegram</div>
+        <div class="badge">Grupo Exclusivo no WhatsApp</div>
         <h1>Economize até <span>70% em Suplementos</span> Todo Dia</h1>
-        <p>Promoções relâmpago de Whey Protein, Creatina, Colágeno e muito mais — direto no seu celular, antes de todo mundo.</p>
+        <p>Promoções relâmpago de Whey Protein, Creatina, Colágeno e muito mais — direto no seu WhatsApp, antes de todo mundo.</p>
     </section>
 
     <!-- Video 9:16 -->
@@ -423,7 +471,7 @@
             <div class="benefit-icon">🔔</div>
             <div class="benefit-text">
                 <strong>Alertas no Momento Certo</strong>
-                <span>Notificação direta no Telegram — sem precisar ficar pesquisando.</span>
+                <span>Notificação direta no WhatsApp — sem precisar ficar pesquisando.</span>
             </div>
         </div>
         <div class="benefit-item">
@@ -437,19 +485,37 @@
 
     <!-- CTA -->
     <div class="cta-section">
+
+        <!-- PRIMARY: WhatsApp -->
+        <a
+            href="https://chat.whatsapp.com/Lw1Fx9QoE2cGX24nHKsgDy?s=sh&p=a&ilr=0"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cta-btn-whatsapp"
+            id="whatsapp-cta">
+            <!-- WhatsApp official icon -->
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+            </svg>
+            Entrar no Grupo do WhatsApp — É Grátis
+        </a>
+        <p class="cta-note">Ao entrar, você concorda com os termos do grupo. Sem spam.</p>
+
+        <!-- SECONDARY: Telegram -->
+        <p class="cta-secondary-label">Prefere Telegram? Entre por aqui</p>
         <a
             href="https://telegram.me/vidasaudavelbr1"
             target="_blank"
             rel="noopener noreferrer"
-            class="cta-btn"
+            class="cta-btn-telegram"
             id="telegram-cta">
             <!-- Telegram icon -->
-            <svg viewBox="0 0 24 24" fill="currentColor">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
             </svg>
-            Entrar no Grupo Agora — É Grátis
+            Também estamos no Telegram
         </a>
-        <p class="cta-note">Ao entrar, você concorda com os termos do grupo. Sem spam.</p>
+
     </div>
 
     <!-- Footer -->
